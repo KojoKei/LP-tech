@@ -11,7 +11,7 @@
 ## まずは vim で書く
 とりあえず何でも良いので vim でサンプルコードを書きます。  
 hello world! とかを適当に。  
-(画像)  
+![helloworld](https://raw.github.com/wiki/KojoKei/lp-tech/images/figB1-1.png)  
 
 ## コンパイルはどうしよう？
 このまま不思議な力を使って javac とかでコンパイルできれば良いんですが、無理なので、ImageJで一度開いてコンパイルしていました。しかし、いちいちImageJを開いてマウスでポチポチ作業することが面倒でたまりません。なので、mavenを利用してImageJを介さずにコンパイルします。  
@@ -35,7 +35,7 @@ mavenの設定に必要な情報を書き込みます。XML言語というやつ
 「IamgeJ ではじめる生物画像解析」にもありましたが、github上でImageJ用の[**POM.xml テンプレート**](https://github.com/imagej/minimal-ij1-plugin) が公開されています。  
 
 テンプレートにそって必要な箇所を書き変えたり、削除したりすれば良いんですが、最低限書くべきなのは下記情報です。  
-(画像)  
+![minimalPOM](https://raw.github.com/wiki/KojoKei/lp-tech/images/figB1-2.png)  
 
 parentの箇所に ImageJ 用の親POM を指定すれば、あとは  
 
@@ -65,7 +65,7 @@ ImageJ の Pluginsメニューバーに hello world って項目が追加され�
 
 ## mavenでビルドするための準備
 まず、ソースコードとPOM.xmlファイル、plugin.configファイルを下記のように配置します。  
-(画像)  
+![tree](https://raw.github.com/wiki/KojoKei/lp-tech/images/figB1-4.png)  
 
 はじめてmavenを利用する場合は、mavenをインストールしましょう。  
 筆者は homebrew から install しました。  
@@ -76,6 +76,8 @@ ImageJ の Pluginsメニューバーに hello world って項目が追加され�
 
 あと、mavenは java 1.7 が必要です。
 もし古ければ[Oracleさん](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)から新しいバージョンを入手しましょう。  
+![jar](https://raw.github.com/wiki/KojoKei/lp-tech/images/figB1-3.png)  
+
 (画像)  
 
 ## compile
@@ -89,7 +91,7 @@ plugin のルートディレクトリ (筆者だと、Desktop/hello_world) に�
 で自動的にビルドされます。  
 
 で、classファイルとか jarファイルが作成されました。  
-(画像)  
+![helloworld](https://raw.github.com/wiki/KojoKei/lp-tech/images/figB1-5.png)  
 
 作成された hello_world.class とか、hello_world-version-.jar を ImageJ Plugin フォルダに移せば完了です。  
 
