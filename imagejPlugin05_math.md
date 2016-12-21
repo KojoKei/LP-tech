@@ -110,7 +110,7 @@ helloWorld(10);
 helloWorld関数の説明に戻ると、引数を1つ、int型の変数 (っていうか10って数値を直接) 渡しています。なので、関数を定義している部分を確認すると、  
 
 ```
-int intensity = 10;
+int iteration = 10;
 for (int i=0; i < iteration; i++) {
 	IJ.log("Hello, world!");
 }
